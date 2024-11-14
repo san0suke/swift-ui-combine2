@@ -17,7 +17,9 @@ struct ContentView: View {
 //        PassthroughSubjectView()
 //        CurrentValueSubjectView()
 //        DeferredExampleView()
-        MapOperatorExampleView()
+//        MapOperatorExampleView()
+//        FlatMapExampleView()
+        FilterExampleView()
     }
 }
 
