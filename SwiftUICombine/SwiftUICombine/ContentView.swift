@@ -19,7 +19,8 @@ struct ContentView: View {
 //        DeferredExampleView()
 //        MapOperatorExampleView()
 //        FlatMapExampleView()
-        FilterExampleView()
+//        FilterExampleView()
+        RemoveDuplicatesExampleView()
     }
 }
 
