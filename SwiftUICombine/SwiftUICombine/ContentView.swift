@@ -20,7 +20,8 @@ struct ContentView: View {
 //        MapOperatorExampleView()
 //        FlatMapExampleView()
 //        FilterExampleView()
-        RemoveDuplicatesExampleView()
+//        RemoveDuplicatesExampleView()
+        CompactMapExampleView()
     }
 }
 
