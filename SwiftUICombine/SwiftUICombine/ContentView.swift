@@ -13,7 +13,9 @@ struct ContentView: View {
 
     var body: some View {
 //        JustExampleView()
-        SequencePublisherView()
+//        SequencePublisherView()
+//        PassthroughSubjectView()
+        CurrentValueSubjectView()
     }
 }
 
