@@ -15,7 +15,8 @@ struct ContentView: View {
 //        JustExampleView()
 //        SequencePublisherView()
 //        PassthroughSubjectView()
-        CurrentValueSubjectView()
+//        CurrentValueSubjectView()
+        DeferredExampleView()
     }
 }
 

@@ -20,6 +20,7 @@
 		8AE56E8B2CE55C840072CEF3 /* SequencePublisherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E8A2CE55C840072CEF3 /* SequencePublisherView.swift */; };
 		8AE56E8D2CE58C9E0072CEF3 /* PassthroughSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E8C2CE58C9D0072CEF3 /* PassthroughSubjectView.swift */; };
 		8AE56E8F2CE5911F0072CEF3 /* CurrentValueSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E8E2CE5911F0072CEF3 /* CurrentValueSubjectView.swift */; };
+		8AE56E912CE595680072CEF3 /* DeferredExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E902CE595680072CEF3 /* DeferredExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		8AE56E8A2CE55C840072CEF3 /* SequencePublisherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencePublisherView.swift; sourceTree = "<group>"; };
 		8AE56E8C2CE58C9D0072CEF3 /* PassthroughSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughSubjectView.swift; sourceTree = "<group>"; };
 		8AE56E8E2CE5911F0072CEF3 /* CurrentValueSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueSubjectView.swift; sourceTree = "<group>"; };
+		8AE56E902CE595680072CEF3 /* DeferredExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				8AE56E8A2CE55C840072CEF3 /* SequencePublisherView.swift */,
 				8AE56E8C2CE58C9D0072CEF3 /* PassthroughSubjectView.swift */,
 				8AE56E8E2CE5911F0072CEF3 /* CurrentValueSubjectView.swift */,
+				8AE56E902CE595680072CEF3 /* DeferredExampleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */,
 				8AE56E8F2CE5911F0072CEF3 /* CurrentValueSubjectView.swift in Sources */,
 				8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */,
+				8AE56E912CE595680072CEF3 /* DeferredExampleView.swift in Sources */,
 				8AE56E8B2CE55C840072CEF3 /* SequencePublisherView.swift in Sources */,
 				8AE56E652CE547CB0072CEF3 /* SwiftUICombine.xcdatamodeld in Sources */,
 				8AE56E8D2CE58C9E0072CEF3 /* PassthroughSubjectView.swift in Sources */,
