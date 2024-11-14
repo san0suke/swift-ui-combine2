@@ -21,6 +21,7 @@
 		8AE56E8D2CE58C9E0072CEF3 /* PassthroughSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E8C2CE58C9D0072CEF3 /* PassthroughSubjectView.swift */; };
 		8AE56E8F2CE5911F0072CEF3 /* CurrentValueSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E8E2CE5911F0072CEF3 /* CurrentValueSubjectView.swift */; };
 		8AE56E912CE595680072CEF3 /* DeferredExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E902CE595680072CEF3 /* DeferredExampleView.swift */; };
+		8AE56E932CE5AF230072CEF3 /* MapExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E922CE5AF230072CEF3 /* MapExampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		8AE56E8C2CE58C9D0072CEF3 /* PassthroughSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughSubjectView.swift; sourceTree = "<group>"; };
 		8AE56E8E2CE5911F0072CEF3 /* CurrentValueSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentValueSubjectView.swift; sourceTree = "<group>"; };
 		8AE56E902CE595680072CEF3 /* DeferredExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeferredExampleView.swift; sourceTree = "<group>"; };
+		8AE56E922CE5AF230072CEF3 /* MapExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				8AE56E8C2CE58C9D0072CEF3 /* PassthroughSubjectView.swift */,
 				8AE56E8E2CE5911F0072CEF3 /* CurrentValueSubjectView.swift */,
 				8AE56E902CE595680072CEF3 /* DeferredExampleView.swift */,
+				8AE56E922CE5AF230072CEF3 /* MapExampleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AE56E932CE5AF230072CEF3 /* MapExampleView.swift in Sources */,
 				8AE56E892CE552410072CEF3 /* JustExampleView.swift in Sources */,
 				8AE56E622CE547CB0072CEF3 /* Persistence.swift in Sources */,
 				8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */,

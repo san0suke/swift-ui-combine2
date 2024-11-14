@@ -16,7 +16,8 @@ struct ContentView: View {
 //        SequencePublisherView()
 //        PassthroughSubjectView()
 //        CurrentValueSubjectView()
-        DeferredExampleView()
+//        DeferredExampleView()
+        MapOperatorExampleView()
     }
 }
 
