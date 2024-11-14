@@ -17,6 +17,7 @@
 		8AE56E792CE547CB0072CEF3 /* SwiftUICombineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E782CE547CB0072CEF3 /* SwiftUICombineUITests.swift */; };
 		8AE56E7B2CE547CB0072CEF3 /* SwiftUICombineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E7A2CE547CB0072CEF3 /* SwiftUICombineUITestsLaunchTests.swift */; };
 		8AE56E892CE552410072CEF3 /* JustExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E882CE552410072CEF3 /* JustExampleView.swift */; };
+		8AE56E8B2CE55C840072CEF3 /* SequencePublisherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E8A2CE55C840072CEF3 /* SequencePublisherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8AE56E782CE547CB0072CEF3 /* SwiftUICombineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineUITests.swift; sourceTree = "<group>"; };
 		8AE56E7A2CE547CB0072CEF3 /* SwiftUICombineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8AE56E882CE552410072CEF3 /* JustExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustExampleView.swift; sourceTree = "<group>"; };
+		8AE56E8A2CE55C840072CEF3 /* SequencePublisherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencePublisherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8AE56E882CE552410072CEF3 /* JustExampleView.swift */,
+				8AE56E8A2CE55C840072CEF3 /* SequencePublisherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				8AE56E622CE547CB0072CEF3 /* Persistence.swift in Sources */,
 				8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */,
 				8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */,
+				8AE56E8B2CE55C840072CEF3 /* SequencePublisherView.swift in Sources */,
 				8AE56E652CE547CB0072CEF3 /* SwiftUICombine.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
