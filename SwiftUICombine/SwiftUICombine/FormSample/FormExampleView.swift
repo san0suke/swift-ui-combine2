@@ -10,9 +10,21 @@ import Combine
 
 struct FormExampleView: View {
     
-    @State var name: String = ""
-    @State var email: String = ""
-    @State var phone: String = ""
+//    private var namePublisher: AnyPublisher<String, Never> {
+//        Just(name)
+//            .eraseToAnyPublisher()
+//    }
+//    
+//    private var emailPublisher: AnyPublisher<String, Never> {
+//        Just(email)
+//            .eraseToAnyPublisher()
+//    }
+//    
+//    private var phonePublisher: AnyPublisher<String, Never> {
+//        Just(phone)
+//            .eraseToAnyPublisher()
+//    }
+    @ObservedObject var viewModel = FormExampleViewModel()
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -24,12 +36,18 @@ struct FormExampleView: View {
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
-                FormTextField(placeholder: "Name", text: $name)
-                FormTextField(placeholder: "Email", text: $email)
-                FormTextField(placeholder: "Phone", text: $phone)
+                FormTextField(placeholder: "Name", text: $viewModel.name)
+                    .textContentType(.name)
                 
-                FormButton(text: "Save") {
-                    print($name)
+                FormTextField(placeholder: "Email", text: $viewModel.email)
+                    .textContentType(.emailAddress)
+                
+                FormTextField(placeholder: "Phone", text: $viewModel.phone)
+                    .textContentType(.telephoneNumber)
+                
+                FormButton(text: "Save", 
+                           isEnabled: $viewModel.submitButtonEnable) {
+                    print("Saving...")
                 }
                 
                 Spacer()
@@ -37,7 +55,7 @@ struct FormExampleView: View {
         }
         .padding()
         .onAppear {
-            print("On Appear")
+            viewModel.setupValidation()
         }
         .onDisappear {
             print("On Disappear")

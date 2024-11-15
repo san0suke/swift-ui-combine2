@@ -10,18 +10,23 @@ import SwiftUI
 struct FormButton: View {
     
     var text: String
+    @Binding var isEnabled: Bool
     var action: () -> Void
     
     var body: some View {
         Button(text, action: action)
-            .padding()
             .font(.headline)
-            .background(.blue)
+            .frame(maxWidth: .infinity)
+            .padding()
             .foregroundColor(.white)
+            .background(isEnabled ? .blue : .gray)
             .cornerRadius(8)
+            .disabled(!isEnabled)
     }
 }
 
 #Preview {
-    FormButton(text: "Submit", action: {})
+    FormButton(text: "Submit",
+               isEnabled: Binding(projectedValue: .constant(false)),
+               action: {})
 }

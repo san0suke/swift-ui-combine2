@@ -18,10 +18,11 @@ struct ContentView: View {
 //        CurrentValueSubjectView()
 //        DeferredExampleView()
 //        MapOperatorExampleView()
-        FlatMapExampleView()
+//        FlatMapExampleView()
 //        FilterExampleView()
 //        RemoveDuplicatesExampleView()
 //        CompactMapExampleView()
+        FormExampleView()
     }
 }
 
