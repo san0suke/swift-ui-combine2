@@ -7,40 +7,30 @@
 
 import SwiftUI
 import Charts
-
-struct SalesData: Identifiable {
-    let id = UUID()
-    let month: String
-    let sales: Double
-}
+import Combine
 
 struct GraphSample: View {
-    let data = [
-        SalesData(month: "Jan", sales: 200),
-        SalesData(month: "Feb", sales: 180),
-        SalesData(month: "Mar", sales: 220),
-        SalesData(month: "Apr", sales: 160),
-        SalesData(month: "May", sales: 250)
-    ]
+    @StateObject private var viewModel = GraphSampleViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Sales Report")
+                Text("Real-Time Sales Data")
                     .font(.title)
                     .padding()
                 
-                Chart(data) { item in
-                    BarMark(
+                Chart(viewModel.data) { item in
+                    LineMark(
                         x: .value("Month", item.month),
                         y: .value("Sales", item.sales)
                     )
                     .foregroundStyle(.blue)
+                    .symbol(Circle())
                 }
                 .frame(height: 300)
                 .padding()
             }
-            .navigationTitle("Chart Example")
+            .navigationTitle("Dynamic Line Chart")
         }
     }
 }
@@ -50,3 +40,4 @@ struct GraphSample_Previews: PreviewProvider {
         GraphSample()
     }
 }
+
