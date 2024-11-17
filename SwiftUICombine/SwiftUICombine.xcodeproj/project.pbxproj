@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A0CE66E2CEAADB100A3C2CF /* GraphSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE66D2CEAADB100A3C2CF /* GraphSample.swift */; };
 		8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */; };
 		8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E5A2CE547C80072CEF3 /* ContentView.swift */; };
 		8AE56E5D2CE547CB0072CEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE56E5C2CE547CB0072CEF3 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A0CE66D2CEAADB100A3C2CF /* GraphSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSample.swift; sourceTree = "<group>"; };
 		8AE56E552CE547C80072CEF3 /* SwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineApp.swift; sourceTree = "<group>"; };
 		8AE56E5A2CE547C80072CEF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A0CE66B2CEAA87100A3C2CF /* GraphSample */ = {
+			isa = PBXGroup;
+			children = (
+				8A0CE66D2CEAADB100A3C2CF /* GraphSample.swift */,
+			);
+			path = GraphSample;
+			sourceTree = "<group>";
+		};
 		8AE56E4C2CE547C80072CEF3 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 		8AE56E572CE547C80072CEF3 /* SwiftUICombine */ = {
 			isa = PBXGroup;
 			children = (
+				8A0CE66B2CEAA87100A3C2CF /* GraphSample */,
 				8AE56EA72CE6F44E0072CEF3 /* Extensions */,
 				8AE56EA02CE6D5830072CEF3 /* FormSample */,
 				8AE56E872CE552340072CEF3 /* Views */,
@@ -353,6 +364,7 @@
 				8AE56E8D2CE58C9E0072CEF3 /* PassthroughSubjectView.swift in Sources */,
 				8AE56E9B2CE686DF0072CEF3 /* RemoveDuplicatesExampleView.swift in Sources */,
 				8AE56EAB2CE6F8730072CEF3 /* FormExampleViewModel.swift in Sources */,
+				8A0CE66E2CEAADB100A3C2CF /* GraphSample.swift in Sources */,
 				8AE56E952CE5B8880072CEF3 /* FlatMapExampleView.swift in Sources */,
 				8AE56E972CE5BC120072CEF3 /* FilterExampleView.swift in Sources */,
 			);

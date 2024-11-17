@@ -22,7 +22,8 @@ struct ContentView: View {
 //        FilterExampleView()
 //        RemoveDuplicatesExampleView()
 //        CompactMapExampleView()
-        FormExampleView()
+//        FormExampleView()
+        GraphSample()
     }
 }
 
