@@ -9,15 +9,18 @@ import Foundation
 import Combine
 
 class GraphSampleViewModel: ObservableObject {
+    
     @Published var data: [GraphSampleSalesData] = []
     private var cancellables = Set<AnyCancellable>()
     private var timer: AnyCancellable?
+    private var currentMonth: Int = 0
     
     init() {
         startGeneratingData()
     }
     
     func startGeneratingData() {
+        addRandomData()
         timer = Timer.publish(every: 2, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
@@ -26,9 +29,15 @@ class GraphSampleViewModel: ObservableObject {
     }
     
     private func addRandomData() {
+        if currentMonth > 11 {
+            currentMonth = 0
+        }
+        
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let randomMonth = months.randomElement() ?? "Unknown"
+        let randomMonth = months[currentMonth]
         let randomSales = Double.random(in: 100...300)
+        
+        currentMonth += 1
         
         let newEntry = GraphSampleSalesData(month: randomMonth, sales: randomSales)
         
