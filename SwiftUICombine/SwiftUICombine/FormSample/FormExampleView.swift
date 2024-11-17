@@ -10,23 +10,7 @@ import Combine
 
 struct FormExampleView: View {
     
-//    private var namePublisher: AnyPublisher<String, Never> {
-//        Just(name)
-//            .eraseToAnyPublisher()
-//    }
-//    
-//    private var emailPublisher: AnyPublisher<String, Never> {
-//        Just(email)
-//            .eraseToAnyPublisher()
-//    }
-//    
-//    private var phonePublisher: AnyPublisher<String, Never> {
-//        Just(phone)
-//            .eraseToAnyPublisher()
-//    }
     @ObservedObject var viewModel = FormExampleViewModel()
-    
-    private var cancellables: Set<AnyCancellable> = []
     
     var body: some View {
         ScrollView {
