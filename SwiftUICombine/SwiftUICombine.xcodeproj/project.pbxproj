@@ -11,6 +11,9 @@
 		8A0CE6702CEAB40500A3C2CF /* GraphSampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE66F2CEAB40500A3C2CF /* GraphSampleViewModel.swift */; };
 		8A0CE6722CEAB42900A3C2CF /* GraphSampleSalesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6712CEAB42900A3C2CF /* GraphSampleSalesData.swift */; };
 		8A0CE6742CEAD9E300A3C2CF /* BarGraphSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6732CEAD9E300A3C2CF /* BarGraphSample.swift */; };
+		8A0CE6772CEAE76500A3C2CF /* ProductFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6762CEAE76500A3C2CF /* ProductFormView.swift */; };
+		8A0CE6792CEAE79700A3C2CF /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6782CEAE79700A3C2CF /* ProductListView.swift */; };
+		8A0CE67B2CEBD39600A3C2CF /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE67A2CEBD39500A3C2CF /* ProductListViewModel.swift */; };
 		8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */; };
 		8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E5A2CE547C80072CEF3 /* ContentView.swift */; };
 		8AE56E5D2CE547CB0072CEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE56E5C2CE547CB0072CEF3 /* Assets.xcassets */; };
@@ -60,6 +63,9 @@
 		8A0CE66F2CEAB40500A3C2CF /* GraphSampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSampleViewModel.swift; sourceTree = "<group>"; };
 		8A0CE6712CEAB42900A3C2CF /* GraphSampleSalesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSampleSalesData.swift; sourceTree = "<group>"; };
 		8A0CE6732CEAD9E300A3C2CF /* BarGraphSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraphSample.swift; sourceTree = "<group>"; };
+		8A0CE6762CEAE76500A3C2CF /* ProductFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFormView.swift; sourceTree = "<group>"; };
+		8A0CE6782CEAE79700A3C2CF /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		8A0CE67A2CEBD39500A3C2CF /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		8AE56E552CE547C80072CEF3 /* SwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineApp.swift; sourceTree = "<group>"; };
 		8AE56E5A2CE547C80072CEF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,16 @@
 			path = GraphSample;
 			sourceTree = "<group>";
 		};
+		8A0CE6752CEAE72000A3C2CF /* CRUDSample */ = {
+			isa = PBXGroup;
+			children = (
+				8A0CE6762CEAE76500A3C2CF /* ProductFormView.swift */,
+				8A0CE6782CEAE79700A3C2CF /* ProductListView.swift */,
+				8A0CE67A2CEBD39500A3C2CF /* ProductListViewModel.swift */,
+			);
+			path = CRUDSample;
+			sourceTree = "<group>";
+		};
 		8AE56E4C2CE547C80072CEF3 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +165,7 @@
 		8AE56E572CE547C80072CEF3 /* SwiftUICombine */ = {
 			isa = PBXGroup;
 			children = (
+				8A0CE6752CEAE72000A3C2CF /* CRUDSample */,
 				8A0CE66B2CEAA87100A3C2CF /* GraphSample */,
 				8AE56EA72CE6F44E0072CEF3 /* Extensions */,
 				8AE56EA02CE6D5830072CEF3 /* FormSample */,
@@ -355,16 +372,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0CE67B2CEBD39600A3C2CF /* ProductListViewModel.swift in Sources */,
 				8AE56E9F2CE6A9670072CEF3 /* FormExampleView.swift in Sources */,
 				8AE56E932CE5AF230072CEF3 /* MapExampleView.swift in Sources */,
 				8AE56E892CE552410072CEF3 /* JustExampleView.swift in Sources */,
 				8AE56E622CE547CB0072CEF3 /* Persistence.swift in Sources */,
 				8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */,
+				8A0CE6792CEAE79700A3C2CF /* ProductListView.swift in Sources */,
 				8AE56EA42CE6D7130072CEF3 /* FormButton.swift in Sources */,
 				8AE56E8F2CE5911F0072CEF3 /* CurrentValueSubjectView.swift in Sources */,
 				8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */,
 				8A0CE6742CEAD9E300A3C2CF /* BarGraphSample.swift in Sources */,
 				8AE56E9D2CE691450072CEF3 /* CompactMapExampleView.swift in Sources */,
+				8A0CE6772CEAE76500A3C2CF /* ProductFormView.swift in Sources */,
 				8AE56E912CE595680072CEF3 /* DeferredExampleView.swift in Sources */,
 				8AE56EA62CE6EF5C0072CEF3 /* FormErrorMessage.swift in Sources */,
 				8A0CE6702CEAB40500A3C2CF /* GraphSampleViewModel.swift in Sources */,
