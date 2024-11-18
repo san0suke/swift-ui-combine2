@@ -27,6 +27,6 @@ struct FormButton: View {
 
 #Preview {
     FormButton(text: "Submit",
-               isEnabled: Binding(projectedValue: .constant(false)),
+               isEnabled: .constant(false),
                action: {})
 }

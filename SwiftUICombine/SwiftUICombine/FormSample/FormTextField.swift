@@ -26,5 +26,5 @@ struct FormTextField: View {
 }
 
 #Preview {
-    FormTextField(placeholder: "Name", text: Binding<String>(projectedValue: .constant("")))
+    FormTextField(placeholder: "Name", text: .constant(""))
 }

@@ -25,7 +25,8 @@ struct ContentView: View {
 //        FormExampleView()
 //        LineGraphSample()
 //        BarGraphSample()
-        ProductListView()
+//        ProductListView()
+        ProductFormView()
     }
 }
 

@@ -11,14 +11,12 @@ import Combine
 struct FormExampleView: View {
     
     @ObservedObject var viewModel = FormExampleViewModel()
+    @State var title = "Registration Form"
     
     var body: some View {
         ScrollView {
             VStack {
-                Text("Registration Form")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                FormTitle(text: $title)
                 
                 FormTextField(placeholder: "Name", text: $viewModel.name)
                     .textContentType(.name)

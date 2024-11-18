@@ -14,6 +14,11 @@
 		8A0CE6772CEAE76500A3C2CF /* ProductFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6762CEAE76500A3C2CF /* ProductFormView.swift */; };
 		8A0CE6792CEAE79700A3C2CF /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6782CEAE79700A3C2CF /* ProductListView.swift */; };
 		8A0CE67B2CEBD39600A3C2CF /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE67A2CEBD39500A3C2CF /* ProductListViewModel.swift */; };
+		8A0CE6802CEBE19700A3C2CF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8A0CE67F2CEBE19700A3C2CF /* Alamofire */; };
+		8A0CE6862CEBE55C00A3C2CF /* ProductFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6852CEBE55C00A3C2CF /* ProductFormViewModel.swift */; };
+		8A0CE6892CEBE59500A3C2CF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6882CEBE59500A3C2CF /* NetworkManager.swift */; };
+		8A0CE68C2CEBEBB500A3C2CF /* ProductDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE68B2CEBEBB500A3C2CF /* ProductDTO.swift */; };
+		8A0CE68E2CEC028400A3C2CF /* FormTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE68D2CEC028400A3C2CF /* FormTitle.swift */; };
 		8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */; };
 		8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E5A2CE547C80072CEF3 /* ContentView.swift */; };
 		8AE56E5D2CE547CB0072CEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE56E5C2CE547CB0072CEF3 /* Assets.xcassets */; };
@@ -58,6 +63,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8A0CE6842CEBE19700A3C2CF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8A0CE66D2CEAADB100A3C2CF /* LineGraphSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphSample.swift; sourceTree = "<group>"; };
 		8A0CE66F2CEAB40500A3C2CF /* GraphSampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphSampleViewModel.swift; sourceTree = "<group>"; };
@@ -66,6 +84,11 @@
 		8A0CE6762CEAE76500A3C2CF /* ProductFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFormView.swift; sourceTree = "<group>"; };
 		8A0CE6782CEAE79700A3C2CF /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		8A0CE67A2CEBD39500A3C2CF /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		8A0CE67D2CEBE18F00A3C2CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8A0CE6852CEBE55C00A3C2CF /* ProductFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFormViewModel.swift; sourceTree = "<group>"; };
+		8A0CE6882CEBE59500A3C2CF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8A0CE68B2CEBEBB500A3C2CF /* ProductDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDTO.swift; sourceTree = "<group>"; };
+		8A0CE68D2CEC028400A3C2CF /* FormTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTitle.swift; sourceTree = "<group>"; };
 		8AE56E552CE547C80072CEF3 /* SwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineApp.swift; sourceTree = "<group>"; };
 		8AE56E5A2CE547C80072CEF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0CE6802CEBE19700A3C2CF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,10 +160,27 @@
 			isa = PBXGroup;
 			children = (
 				8A0CE6762CEAE76500A3C2CF /* ProductFormView.swift */,
+				8A0CE6852CEBE55C00A3C2CF /* ProductFormViewModel.swift */,
 				8A0CE6782CEAE79700A3C2CF /* ProductListView.swift */,
 				8A0CE67A2CEBD39500A3C2CF /* ProductListViewModel.swift */,
+				8A0CE68B2CEBEBB500A3C2CF /* ProductDTO.swift */,
 			);
 			path = CRUDSample;
+			sourceTree = "<group>";
+		};
+		8A0CE67E2CEBE19700A3C2CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A0CE6872CEBE56700A3C2CF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8A0CE6882CEBE59500A3C2CF /* NetworkManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8AE56E4C2CE547C80072CEF3 = {
@@ -149,6 +190,7 @@
 				8AE56E6D2CE547CB0072CEF3 /* SwiftUICombineTests */,
 				8AE56E772CE547CB0072CEF3 /* SwiftUICombineUITests */,
 				8AE56E562CE547C80072CEF3 /* Products */,
+				8A0CE67E2CEBE19700A3C2CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,10 +207,12 @@
 		8AE56E572CE547C80072CEF3 /* SwiftUICombine */ = {
 			isa = PBXGroup;
 			children = (
+				8A0CE67D2CEBE18F00A3C2CF /* Info.plist */,
 				8A0CE6752CEAE72000A3C2CF /* CRUDSample */,
-				8A0CE66B2CEAA87100A3C2CF /* GraphSample */,
 				8AE56EA72CE6F44E0072CEF3 /* Extensions */,
+				8A0CE66B2CEAA87100A3C2CF /* GraphSample */,
 				8AE56EA02CE6D5830072CEF3 /* FormSample */,
+				8A0CE6872CEBE56700A3C2CF /* Utils */,
 				8AE56E872CE552340072CEF3 /* Views */,
 				8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */,
 				8AE56E5A2CE547C80072CEF3 /* ContentView.swift */,
@@ -230,6 +274,7 @@
 				8AE56EA32CE6D7130072CEF3 /* FormButton.swift */,
 				8AE56EA52CE6EF5C0072CEF3 /* FormErrorMessage.swift */,
 				8AE56EAA2CE6F8730072CEF3 /* FormExampleViewModel.swift */,
+				8A0CE68D2CEC028400A3C2CF /* FormTitle.swift */,
 			);
 			path = FormSample;
 			sourceTree = "<group>";
@@ -252,12 +297,16 @@
 				8AE56E512CE547C80072CEF3 /* Sources */,
 				8AE56E522CE547C80072CEF3 /* Frameworks */,
 				8AE56E532CE547C80072CEF3 /* Resources */,
+				8A0CE6842CEBE19700A3C2CF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SwiftUICombine;
+			packageProductDependencies = (
+				8A0CE67F2CEBE19700A3C2CF /* Alamofire */,
+			);
 			productName = SwiftUICombine;
 			productReference = 8AE56E552CE547C80072CEF3 /* SwiftUICombine.app */;
 			productType = "com.apple.product-type.application";
@@ -330,6 +379,9 @@
 				Base,
 			);
 			mainGroup = 8AE56E4C2CE547C80072CEF3;
+			packageReferences = (
+				8A0CE67C2CEBE16200A3C2CF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8AE56E562CE547C80072CEF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,10 +433,13 @@
 				8A0CE6792CEAE79700A3C2CF /* ProductListView.swift in Sources */,
 				8AE56EA42CE6D7130072CEF3 /* FormButton.swift in Sources */,
 				8AE56E8F2CE5911F0072CEF3 /* CurrentValueSubjectView.swift in Sources */,
+				8A0CE68C2CEBEBB500A3C2CF /* ProductDTO.swift in Sources */,
 				8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */,
+				8A0CE6862CEBE55C00A3C2CF /* ProductFormViewModel.swift in Sources */,
 				8A0CE6742CEAD9E300A3C2CF /* BarGraphSample.swift in Sources */,
 				8AE56E9D2CE691450072CEF3 /* CompactMapExampleView.swift in Sources */,
 				8A0CE6772CEAE76500A3C2CF /* ProductFormView.swift in Sources */,
+				8A0CE6892CEBE59500A3C2CF /* NetworkManager.swift in Sources */,
 				8AE56E912CE595680072CEF3 /* DeferredExampleView.swift in Sources */,
 				8AE56EA62CE6EF5C0072CEF3 /* FormErrorMessage.swift in Sources */,
 				8A0CE6702CEAB40500A3C2CF /* GraphSampleViewModel.swift in Sources */,
@@ -396,6 +451,7 @@
 				8AE56E9B2CE686DF0072CEF3 /* RemoveDuplicatesExampleView.swift in Sources */,
 				8AE56EAB2CE6F8730072CEF3 /* FormExampleViewModel.swift in Sources */,
 				8A0CE66E2CEAADB100A3C2CF /* LineGraphSample.swift in Sources */,
+				8A0CE68E2CEC028400A3C2CF /* FormTitle.swift in Sources */,
 				8AE56E952CE5B8880072CEF3 /* FlatMapExampleView.swift in Sources */,
 				8A0CE6722CEAB42900A3C2CF /* GraphSampleSalesData.swift in Sources */,
 				8AE56E972CE5BC120072CEF3 /* FilterExampleView.swift in Sources */,
@@ -565,6 +621,7 @@
 				DEVELOPMENT_TEAM = M5GQYJFX4D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUICombine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -594,6 +651,7 @@
 				DEVELOPMENT_TEAM = M5GQYJFX4D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUICombine/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -728,6 +786,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8A0CE67C2CEBE16200A3C2CF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8A0CE67F2CEBE19700A3C2CF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A0CE67C2CEBE16200A3C2CF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		8AE56E632CE547CB0072CEF3 /* SwiftUICombine.xcdatamodeld */ = {

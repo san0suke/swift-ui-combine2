@@ -25,5 +25,5 @@ struct FormErrorMessage: View {
 }
 
 #Preview {
-    FormErrorMessage(text: "Invalid data", show: Binding(projectedValue: .constant(true)))
+    FormErrorMessage(text: "Invalid data", show: .constant(true))
 }
