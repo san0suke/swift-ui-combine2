@@ -9,7 +9,7 @@ import SwiftUI
 import Charts
 import Combine
 
-struct GraphSample: View {
+struct LineGraphSample: View {
     @StateObject private var viewModel = GraphSampleViewModel()
     
     var body: some View {
@@ -27,7 +27,6 @@ struct GraphSample: View {
                     .foregroundStyle(.blue)
                     .symbol(Circle())
                 }
-                .frame(height: 300)
                 .padding()
             }
             .navigationTitle("Dynamic Line Chart")
@@ -37,7 +36,7 @@ struct GraphSample: View {
 
 struct GraphSample_Previews: PreviewProvider {
     static var previews: some View {
-        GraphSample()
+        LineGraphSample()
     }
 }
 
