@@ -43,7 +43,9 @@ class ProductFormViewModel: ObservableObject {
     }
     
     func save() async throws {
-        isLoading = true
+        DispatchQueue.main.async {
+            self.isLoading = true
+        }
         
         let parameters: [String: Any] = [
             "id": id,
