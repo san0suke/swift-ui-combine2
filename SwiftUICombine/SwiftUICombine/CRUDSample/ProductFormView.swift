@@ -18,7 +18,9 @@ struct ProductFormView: View {
                 FormTextField(placeholder: "Name", text: $viewModel.name)
                 FormTextField(placeholder: "Price", text: $viewModel.price)
                 FormButton(text: "Save", isEnabled: $viewModel.submitEnabled) {
-                    saveProduct()
+                    Task {
+                        await saveProduct()
+                    }
                 }
             }
             .padding()
@@ -29,9 +31,13 @@ struct ProductFormView: View {
         .navigationTitle($viewModel.title)
     }
     
-    private func saveProduct() {
-        viewModel.save()
-        dismiss()
+    private func saveProduct() async {
+        do {
+            try await viewModel.save()
+            dismiss()
+        } catch {
+            print("Error saving")
+        }
     }
 }
 

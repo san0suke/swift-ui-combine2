@@ -25,21 +25,25 @@ class ProductFormViewModel: ObservableObject {
             .assign(to: &$submitEnabled)
     }
     
-    func save() {
+    func save() async throws {
         let parameters: [String: Any] = [
             "id": id,
             "name": name,
             "price": Float(price) ?? 0.0
         ]
         
-        NetworkManager.shared
-            .postRequest(url: Constants.productUrl, parameters: parameters) { (result: Result<ProductResponseDTO, AFError>) in
-            switch result {
-            case .success(let response):
-                print("Response:", response)
-            case .failure(let error):
-                print("Error:", error.localizedDescription)
-            }
+        try await withCheckedThrowingContinuation { continuation in
+            NetworkManager.shared
+                .postRequest(url: Constants.productUrl, parameters: parameters) { (result: Result<ProductResponseDTO, AFError>) in
+                    switch result {
+                    case .success(let response):
+                        print("Response:", response)
+                        continuation.resume()
+                    case .failure(let error):
+                        print("Error:", error.localizedDescription)
+                        continuation.resume(throwing: error)
+                    }
+                }
         }
     }
 }
