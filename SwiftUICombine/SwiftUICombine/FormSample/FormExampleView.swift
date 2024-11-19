@@ -11,13 +11,10 @@ import Combine
 struct FormExampleView: View {
     
     @ObservedObject var viewModel = FormExampleViewModel()
-    @State var title = "Registration Form"
     
     var body: some View {
         ScrollView {
             VStack {
-                FormTitle(text: $title)
-                
                 FormTextField(placeholder: "Name", text: $viewModel.name)
                     .textContentType(.name)
                 
@@ -42,6 +39,7 @@ struct FormExampleView: View {
         .onDisappear {
             print("On Disappear")
         }
+        .navigationTitle("Registration Form")
     }
 }
 
