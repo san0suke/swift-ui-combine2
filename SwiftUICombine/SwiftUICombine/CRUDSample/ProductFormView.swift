@@ -9,17 +9,16 @@ import SwiftUI
 
 struct ProductFormView: View {
     
+    @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel = ProductFormViewModel()
     
     var body: some View {
         ScrollView {
             VStack {
-                FormTitle(text: $viewModel.title)
-                
                 FormTextField(placeholder: "Name", text: $viewModel.name)
                 FormTextField(placeholder: "Price", text: $viewModel.price)
                 FormButton(text: "Save", isEnabled: $viewModel.submitEnabled) {
-                    viewModel.save()
+                    saveProduct()
                 }
             }
             .padding()
@@ -27,6 +26,12 @@ struct ProductFormView: View {
         .onAppear {
             viewModel.setupValidation()
         }
+        .navigationTitle($viewModel.title)
+    }
+    
+    private func saveProduct() {
+        viewModel.save()
+        dismiss()
     }
 }
 
