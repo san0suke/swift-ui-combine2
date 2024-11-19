@@ -39,6 +39,7 @@ struct ProductListView: View {
                         
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: {
+                                selectedProduct = nil
                                 navigateToForm = true
                             }) {
                                 Image(systemName: "plus")
