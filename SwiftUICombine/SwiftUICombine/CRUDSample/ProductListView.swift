@@ -15,11 +15,6 @@ struct ProductListView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Product list")
-                    .font(.title)
-                    .padding()
-                
-                
                 List {
                     ForEach(viewModel.products) { item in
                         Text(item.name)
@@ -28,6 +23,7 @@ struct ProductListView: View {
                         viewModel.delete(indexSet)
                     })
                 }
+                .navigationTitle("Product list")
                 .toolbar {
                     EditButton()
                 }

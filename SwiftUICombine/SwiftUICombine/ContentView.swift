@@ -12,21 +12,23 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     var body: some View {
-//        JustExampleView()
-//        SequencePublisherView()
-//        PassthroughSubjectView()
-//        CurrentValueSubjectView()
-//        DeferredExampleView()
-//        MapOperatorExampleView()
-//        FlatMapExampleView()
-//        FilterExampleView()
-//        RemoveDuplicatesExampleView()
-//        CompactMapExampleView()
-//        FormExampleView()
-//        LineGraphSample()
-//        BarGraphSample()
-//        ProductListView()
-        ProductListView()
+        NavigationView {
+//            JustExampleView()
+//            SequencePublisherView()
+//            PassthroughSubjectView()
+//            CurrentValueSubjectView()
+//            DeferredExampleView()
+//            MapOperatorExampleView()
+//            FlatMapExampleView()
+//            FilterExampleView()
+//            RemoveDuplicatesExampleView()
+//            CompactMapExampleView()
+//            FormExampleView()
+//            LineGraphSample()
+//            BarGraphSample()
+//            ProductListView()
+            ProductListView()
+        }
     }
 }
 
