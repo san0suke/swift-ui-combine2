@@ -12,7 +12,7 @@ import Alamofire
 class ProductListViewModel: ObservableObject {
     
     @Published var products: [ProductDTO] = []
-    var isLoading: Bool = true
+    @Published var isLoading: Bool = true
     
     func loadProducts() {
         self.isLoading = true
@@ -42,10 +42,11 @@ class ProductListViewModel: ObservableObject {
                 default:
                     break
                 }
+                    
+                self.isLoading = false
             }
             
             products.remove(at: productIndex)
-            self.isLoading = false
         }
     }
 }

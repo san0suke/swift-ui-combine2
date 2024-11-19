@@ -17,6 +17,8 @@ struct LoadingView: View {
                 .padding()
                 .background(Color.gray.opacity(0.8))
                 .cornerRadius(10)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .edgesIgnoringSafeArea(.all)
         }
     }
 }
