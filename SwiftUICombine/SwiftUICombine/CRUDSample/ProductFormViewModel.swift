@@ -26,7 +26,7 @@ class ProductFormViewModel: ObservableObject {
             name = product.name
             price = "\(product.price)"
             
-//            title = "Update Product"
+            title = "Update Product"
             
             isEditing = true
         }
