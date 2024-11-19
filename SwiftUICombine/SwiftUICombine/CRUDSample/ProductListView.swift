@@ -13,14 +13,23 @@ struct ProductListView: View {
     @ObservedObject var viewModel = ProductListViewModel()
     
     var body: some View {
-        VStack {
-            Text("Product list")
-                .font(.title)
-                .padding()
-            
-            List(viewModel.products, id: \.self) { item in
-                Text(item)
+        ZStack {
+            if viewModel.isLoading {
+                LoadingView()
+            } else {
+                VStack {
+                    Text("Product list")
+                        .font(.title)
+                        .padding()
+                    
+                    List(viewModel.products) { item in
+                        Text(item.name)
+                    }
+                }
             }
+        }
+        .onAppear {
+            viewModel.loadProducts()
         }
     }
 }

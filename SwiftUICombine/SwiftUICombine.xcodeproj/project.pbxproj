@@ -21,6 +21,8 @@
 		8A0CE68E2CEC028400A3C2CF /* FormTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE68D2CEC028400A3C2CF /* FormTitle.swift */; };
 		8A0CE6902CEC06EC00A3C2CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE68F2CEC06EC00A3C2CF /* Constants.swift */; };
 		8A0CE6922CEC132900A3C2CF /* ProductResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6912CEC132900A3C2CF /* ProductResponseDTO.swift */; };
+		8A0CE6942CEC1B6900A3C2CF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6932CEC1B6900A3C2CF /* LoadingView.swift */; };
+		8A0CE6962CEC1DF500A3C2CF /* ProductListResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0CE6952CEC1DF500A3C2CF /* ProductListResponseDTO.swift */; };
 		8AE56E592CE547C80072CEF3 /* SwiftUICombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */; };
 		8AE56E5B2CE547C80072CEF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE56E5A2CE547C80072CEF3 /* ContentView.swift */; };
 		8AE56E5D2CE547CB0072CEF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE56E5C2CE547CB0072CEF3 /* Assets.xcassets */; };
@@ -93,6 +95,8 @@
 		8A0CE68D2CEC028400A3C2CF /* FormTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTitle.swift; sourceTree = "<group>"; };
 		8A0CE68F2CEC06EC00A3C2CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8A0CE6912CEC132900A3C2CF /* ProductResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponseDTO.swift; sourceTree = "<group>"; };
+		8A0CE6932CEC1B6900A3C2CF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8A0CE6952CEC1DF500A3C2CF /* ProductListResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListResponseDTO.swift; sourceTree = "<group>"; };
 		8AE56E552CE547C80072CEF3 /* SwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE56E582CE547C80072CEF3 /* SwiftUICombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICombineApp.swift; sourceTree = "<group>"; };
 		8AE56E5A2CE547C80072CEF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				8A0CE67A2CEBD39500A3C2CF /* ProductListViewModel.swift */,
 				8A0CE68B2CEBEBB500A3C2CF /* ProductDTO.swift */,
 				8A0CE6912CEC132900A3C2CF /* ProductResponseDTO.swift */,
+				8A0CE6952CEC1DF500A3C2CF /* ProductListResponseDTO.swift */,
 			);
 			path = CRUDSample;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			children = (
 				8A0CE6882CEBE59500A3C2CF /* NetworkManager.swift */,
 				8A0CE68F2CEC06EC00A3C2CF /* Constants.swift */,
+				8A0CE6932CEC1B6900A3C2CF /* LoadingView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -431,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A0CE6922CEC132900A3C2CF /* ProductResponseDTO.swift in Sources */,
+				8A0CE6962CEC1DF500A3C2CF /* ProductListResponseDTO.swift in Sources */,
 				8A0CE67B2CEBD39600A3C2CF /* ProductListViewModel.swift in Sources */,
 				8AE56E9F2CE6A9670072CEF3 /* FormExampleView.swift in Sources */,
 				8AE56E932CE5AF230072CEF3 /* MapExampleView.swift in Sources */,
@@ -451,6 +458,7 @@
 				8AE56E912CE595680072CEF3 /* DeferredExampleView.swift in Sources */,
 				8AE56EA62CE6EF5C0072CEF3 /* FormErrorMessage.swift in Sources */,
 				8A0CE6702CEAB40500A3C2CF /* GraphSampleViewModel.swift in Sources */,
+				8A0CE6942CEC1B6900A3C2CF /* LoadingView.swift in Sources */,
 				8AE56E8B2CE55C840072CEF3 /* SequencePublisherView.swift in Sources */,
 				8AE56E652CE547CB0072CEF3 /* SwiftUICombine.xcdatamodeld in Sources */,
 				8AE56EA92CE6F45F0072CEF3 /* String+Extensions.swift in Sources */,
