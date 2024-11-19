@@ -15,6 +15,7 @@ class ProductListViewModel: ObservableObject {
     var isLoading: Bool = true
     
     func loadProducts() {
+        self.isLoading = true
         NetworkManager.shared
             .getRequest(url: Constants.productUrl) { (result: Result<ProductListResponseDTO, AFError>) in
             switch result {
@@ -23,6 +24,27 @@ class ProductListViewModel: ObservableObject {
             case .failure(let error):
                 print("Error:", error.localizedDescription)
             }
+            self.isLoading = false
+        }
+    }
+    
+    func delete(_ indexSet: IndexSet) {
+        self.isLoading = true
+        
+        for productIndex in indexSet {
+            let id = products[productIndex].id
+            NetworkManager.shared
+                .deleteRequest(url: "\(Constants.productUrl)?id=\(id)") { (result: Result<ProductResponseDTO, AFError>) in
+                switch result {
+                case .failure(let error):
+                    print("Error:", error.localizedDescription)
+                    self.loadProducts()
+                default:
+                    break
+                }
+            }
+            
+            products.remove(at: productIndex)
             self.isLoading = false
         }
     }

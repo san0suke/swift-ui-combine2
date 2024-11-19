@@ -22,8 +22,17 @@ struct ProductListView: View {
                         .font(.title)
                         .padding()
                     
-                    List(viewModel.products) { item in
-                        Text(item.name)
+                    
+                    List {
+                        ForEach(viewModel.products) { item in
+                            Text(item.name)
+                        }
+                        .onDelete(perform: { indexSet in
+                            viewModel.delete(indexSet)
+                        })
+                    }
+                    .toolbar {
+                        EditButton()
                     }
                 }
             }
