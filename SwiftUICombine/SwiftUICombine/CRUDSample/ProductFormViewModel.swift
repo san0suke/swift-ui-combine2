@@ -80,7 +80,8 @@ class ProductFormViewModel: ObservableObject {
         }
     }
     
-    private func processResult(_ continuation: CheckedContinuation<(), any Error>, _ result: Result<ProductResponseDTO, AFError>) {
+    private func processResult(_ continuation: CheckedContinuation<(), any Error>, 
+                               _ result: Result<ProductResponseDTO, AFError>) {
         switch result {
         case .success:
             continuation.resume()
