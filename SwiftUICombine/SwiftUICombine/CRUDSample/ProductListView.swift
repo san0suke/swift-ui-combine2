@@ -25,7 +25,17 @@ struct ProductListView: View {
                 }
                 .navigationTitle("Product list")
                 .toolbar {
-                    EditButton()
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            print("Add")
+                        }) {
+                            Image(systemName: "plus")
+                        }
+                    }
                 }
             }
             .blur(radius: viewModel.isLoading ? 3 : 0)
