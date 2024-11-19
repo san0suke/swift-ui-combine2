@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductDTO {
+struct ProductDTO: Codable {
     var id: String
     var name: String
     var price: Float

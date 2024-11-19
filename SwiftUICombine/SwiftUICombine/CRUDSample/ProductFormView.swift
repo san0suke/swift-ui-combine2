@@ -19,7 +19,7 @@ struct ProductFormView: View {
                 FormTextField(placeholder: "Name", text: $viewModel.name)
                 FormTextField(placeholder: "Price", text: $viewModel.price)
                 FormButton(text: "Save", isEnabled: $viewModel.submitEnabled) {
-                    
+                    viewModel.save()
                 }
             }
             .padding()

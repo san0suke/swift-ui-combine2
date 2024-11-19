@@ -7,10 +7,11 @@
 
 import SwiftUI
 import Combine
+import Alamofire
 
 class ProductFormViewModel: ObservableObject {
     
-    var id: String?
+    var id: String = UUID().uuidString
     @Published var title: String = "Create Product"
     @Published var name: String = ""
     @Published var price: String = ""
@@ -25,6 +26,20 @@ class ProductFormViewModel: ObservableObject {
     }
     
     func save() {
+        let parameters: [String: Any] = [
+            "id": id,
+            "name": name,
+            "price": Float(price) ?? 0.0
+        ]
         
+        NetworkManager.shared
+            .postRequest(url: Constants.productUrl, parameters: parameters) { (result: Result<ProductResponseDTO, AFError>) in
+            switch result {
+            case .success(let response):
+                print("Response:", response)
+            case .failure(let error):
+                print("Error:", error.localizedDescription)
+            }
+        }
     }
 }
