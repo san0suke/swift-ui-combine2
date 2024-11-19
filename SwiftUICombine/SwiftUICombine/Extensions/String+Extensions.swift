@@ -14,7 +14,7 @@ extension String {
         return emailPredicate.evaluate(with: self)
     }
     
-    func isValidFloat() -> Bool {
-        return Float(self) != nil
+    func isValidDouble() -> Bool {
+        return Double(self) != nil
     }
 }

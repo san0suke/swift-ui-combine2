@@ -37,7 +37,7 @@ class ProductFormViewModel: ObservableObject {
     func setupValidation() {
         Publishers.CombineLatest($name, $price)
             .map { name, price in
-                return !name.isEmpty && price.isValidFloat()
+                return !name.isEmpty && price.isValidDouble()
             }
             .assign(to: &$submitEnabled)
     }
@@ -50,7 +50,7 @@ class ProductFormViewModel: ObservableObject {
         let parameters: [String: Any] = [
             "id": id,
             "name": name,
-            "price": Float(price) ?? 0.0
+            "price": Double(price) ?? 0.0
         ]
         
         if !isEditing {

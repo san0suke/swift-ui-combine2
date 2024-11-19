@@ -10,5 +10,5 @@ import Foundation
 struct ProductDTO: Codable, Identifiable, Hashable {
     var id: String
     var name: String
-    var price: Float
+    var price: Double
 }
