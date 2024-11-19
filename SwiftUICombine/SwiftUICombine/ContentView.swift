@@ -23,9 +23,9 @@ struct ContentView: View {
 //            FilterExampleView()
 //            RemoveDuplicatesExampleView()
 //            CompactMapExampleView()
-            FormExampleView()
+//            FormExampleView()
 //            LineGraphSample()
-//            BarGraphSample()
+            BarGraphSample()
 //            ProductListView()
         }
     }

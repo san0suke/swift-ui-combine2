@@ -15,16 +15,13 @@ struct BarGraphSample: View {
     
     var body: some View {
         VStack {
-            Text("Real-time sales")
-                .font(.title)
-                .padding()
-            
             Chart(viewModel.data) { item in
                 BarMark(x: .value("Month", item.month),
                          y: .value("Sales", item.sales))
                     .foregroundStyle(.blue)
             }
             .navigationTitle("Bar sales charts")
+            .padding(.top)
         }
     }
 }

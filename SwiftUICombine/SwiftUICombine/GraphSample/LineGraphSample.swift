@@ -13,24 +13,18 @@ struct LineGraphSample: View {
     @StateObject private var viewModel = GraphSampleViewModel()
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Real-Time Sales Data")
-                    .font(.title)
-                    .padding()
-                
-                Chart(viewModel.data) { item in
-                    LineMark(
-                        x: .value("Month", item.month),
-                        y: .value("Sales", item.sales)
-                    )
-                    .foregroundStyle(.blue)
-                    .symbol(Circle())
-                }
-                .padding()
+        VStack {
+            Chart(viewModel.data) { item in
+                LineMark(
+                    x: .value("Month", item.month),
+                    y: .value("Sales", item.sales)
+                )
+                .foregroundStyle(.blue)
+                .symbol(Circle())
             }
-            .navigationTitle("Dynamic Line Chart")
+            .padding(.top)
         }
+        .navigationTitle("Dynamic Line Chart")
     }
 }
 
