@@ -14,14 +14,17 @@ struct FormButton: View {
     var action: () -> Void
     
     var body: some View {
-        Button(text, action: action)
-            .font(.headline)
-            .frame(maxWidth: .infinity)
-            .padding()
-            .foregroundColor(.white)
-            .background(isEnabled ? .blue : .gray)
-            .cornerRadius(8)
-            .disabled(!isEnabled)
+        
+        Button(action: action) {
+            Text(text)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(isEnabled ? .blue : .gray)
+                .cornerRadius(8)
+                .disabled(!isEnabled)
+        }
     }
 }
 
