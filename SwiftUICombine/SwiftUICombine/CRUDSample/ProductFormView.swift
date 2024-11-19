@@ -11,24 +11,33 @@ struct ProductFormView: View {
     
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel = ProductFormViewModel()
+    @State var product: ProductDTO?
     
     var body: some View {
-        ScrollView {
-            VStack {
-                FormTextField(placeholder: "Name", text: $viewModel.name)
-                FormTextField(placeholder: "Price", text: $viewModel.price)
-                FormButton(text: "Save", isEnabled: $viewModel.submitEnabled) {
-                    Task {
-                        await saveProduct()
+        ZStack {
+            ScrollView {
+                VStack {
+                    FormTextField(placeholder: "Name", text: $viewModel.name)
+                    FormTextField(placeholder: "Price", text: $viewModel.price)
+                    FormButton(text: "Save", isEnabled: $viewModel.submitEnabled) {
+                        Task {
+                            await saveProduct()
+                        }
                     }
                 }
+                .padding()
             }
-            .padding()
+            .onAppear {
+                viewModel.setup(product: product)
+            }
+            .navigationTitle($viewModel.title)
+            .blur(radius: viewModel.isLoading ? 3 : 0)
+            
+            if viewModel.isLoading {
+                LoadingView()
+            }
         }
-        .onAppear {
-            viewModel.setupValidation()
-        }
-        .navigationTitle($viewModel.title)
+        
     }
     
     private func saveProduct() async {

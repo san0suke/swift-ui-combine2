@@ -11,11 +11,28 @@ import Alamofire
 
 class ProductFormViewModel: ObservableObject {
     
-    var id: String = UUID().uuidString
+    private var isEditing = false
+    private var id: String = UUID().uuidString
+    
     @Published var title: String = "Create Product"
     @Published var name: String = ""
     @Published var price: String = ""
     @Published var submitEnabled: Bool = false
+    @Published var isLoading: Bool = false
+    
+    func setup(product: ProductDTO?) {
+        if let product = product {
+            id = product.id
+            name = product.name
+            price = "\(product.price)"
+            
+//            title = "Update Product"
+            
+            isEditing = true
+        }
+        
+        setupValidation()
+    }
     
     func setupValidation() {
         Publishers.CombineLatest($name, $price)
@@ -26,24 +43,48 @@ class ProductFormViewModel: ObservableObject {
     }
     
     func save() async throws {
+        isLoading = true
+        
         let parameters: [String: Any] = [
             "id": id,
             "name": name,
             "price": Float(price) ?? 0.0
         ]
         
+        if !isEditing {
+            try await insertNewProduct(parameters)
+        } else {
+            try await updateProduct(parameters)
+        }
+    }
+    
+    func insertNewProduct(_ parameters: [String: Any]) async throws {
         try await withCheckedThrowingContinuation { continuation in
             NetworkManager.shared
-                .postRequest(url: Constants.productUrl, parameters: parameters) { (result: Result<ProductResponseDTO, AFError>) in
-                    switch result {
-                    case .success(let response):
-                        print("Response:", response)
-                        continuation.resume()
-                    case .failure(let error):
-                        print("Error:", error.localizedDescription)
-                        continuation.resume(throwing: error)
-                    }
+                .postRequest(url: Constants.productUrl, 
+                             parameters: parameters) { (result: Result<ProductResponseDTO, AFError>) in
+                    self.processResult(continuation, result)
                 }
+        }
+    }
+    
+    func updateProduct(_ parameters: [String: Any]) async throws {
+        try await withCheckedThrowingContinuation { continuation in
+            NetworkManager.shared
+                .putRequest(url: "\(Constants.productUrl)?id=\(id)", 
+                            parameters: parameters) { (result: Result<ProductResponseDTO, AFError>) in
+                    self.processResult(continuation, result)
+                }
+        }
+    }
+    
+    private func processResult(_ continuation: CheckedContinuation<(), any Error>, _ result: Result<ProductResponseDTO, AFError>) {
+        switch result {
+        case .success:
+            continuation.resume()
+        case .failure(let error):
+            continuation.resume(throwing: error)
+            self.isLoading = false
         }
     }
 }

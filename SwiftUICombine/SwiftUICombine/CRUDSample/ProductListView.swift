@@ -11,7 +11,7 @@ import Combine
 struct ProductListView: View {
     
     @ObservedObject var viewModel = ProductListViewModel()
-//    @State private var selectedProduct: ProductDTO?
+    @State private var selectedProduct: ProductDTO?
     @State private var navigateToForm = false
     
     var body: some View {
@@ -20,11 +20,12 @@ struct ProductListView: View {
                 VStack {
                     List {
                         ForEach(viewModel.products) { item in
-                            Text(item.name)
-                                .onTapGesture {
-//                                selectedProduct = item
-                                    navigateToForm = true
-                                }
+                            Button {
+                                selectedProduct = item
+                                navigateToForm = true
+                            } label: {
+                                Text(item.name)
+                            }
                         }
                         .onDelete(perform: { indexSet in
                             viewModel.delete(indexSet)
@@ -47,7 +48,7 @@ struct ProductListView: View {
                 }
                 .blur(radius: viewModel.isLoading ? 3 : 0)
                 .navigationDestination(isPresented: $navigateToForm) {
-                    ProductFormView()
+                    ProductFormView(product: selectedProduct)
                 }
                 
                 if viewModel.isLoading {
